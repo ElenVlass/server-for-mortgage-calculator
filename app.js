@@ -3,7 +3,7 @@ const logger = require('morgan')
 const cors = require('cors')
 const helmet = require('helmet')
 
-const { banksRouter } = require('./routes/api')
+const banksRouter = require('./routes/api/banks')
 
 const app = express()
 
@@ -13,7 +13,6 @@ app.use(helmet())
 app.use(logger(formatsLogger))
 app.use(cors())
 app.use(express.json({ limit: 10000 }))
-app.use(express.static('public'))
 
 app.use('/api/banks', banksRouter)
 
