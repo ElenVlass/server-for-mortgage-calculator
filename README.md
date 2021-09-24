@@ -22,17 +22,17 @@ returns an array of all banks in json with `status 200`
   `{name, interestRate, maximumLoan, minimumDownPayment, loanTerm}`
 - if in `body` some of the required fields is missing, returns json with
   `{"message": "missing required name field"}` and `status 404`
-- as result returns an object with the added id
+- as result returns an object with the added id:
   `{id, name, interestRate, maximumLoan, minimumDownPayment, loanTerm}` and
   `status 201`
 
 #### @ DELETE /api/banks/:bankId
 
 - gets a parameter `bankId`
-- if there is such an id, it returns json `{"message": "Bank deleted"` and
+- if there is such an id, it returns json `{"message": "Bank deleted"}` and
   `status 204`
 - if there is no such id, it returns json with
-  `"message": 'This bank was not found'` and `status 404`
+  `{"message": 'This bank was not found'}` and `status 404`
 
 #### @PUT /api/banks/:bankId
 
