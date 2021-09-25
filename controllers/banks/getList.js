@@ -3,8 +3,9 @@ const asyncCtrlWrapper = require('../../helpers/ctrlAsyncWrapper')
 
 const getList = async (req, res, next) => {
   const {
-    limit = 2,
+    limit = 7,
     offset = 0,
+    page = 1,
     sortBy,
     sortByDesc
   } = req.query
